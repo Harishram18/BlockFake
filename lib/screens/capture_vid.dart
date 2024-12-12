@@ -179,7 +179,7 @@ class _VideoRecorderScreenState extends State<VideoRecorderScreen> {
 
       if (response.statusCode == 200) {
         // Handle success response
-        await incrementScore()
+        await incrementScore();
         var responseData = await http.Response.fromStream(response);
         ScaffoldMessenger.of(this.context).showSnackBar(
           SnackBar(content: Text('Video uploaded successfully: ${responseData.body}')),
